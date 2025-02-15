@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Valentine's Day</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+    .heart {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      transform: rotate(-45deg);
+      animation: heartbeat 1s infinite;
+      margin-bottom: 20px;
+    }
+    .heart:before,
+    .heart:after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .heart:before {
+      top: -50px;
+      left: 0;
+    }
+    .heart:after {
+      left: 50px;
+      top: 0;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1) rotate(-45deg); }
+      50% { transform: scale(1.2) rotate(-45deg); }
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 10px 0;
+    }
+    .message {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .media-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+    .media-item {
+      flex: 1 1 300px;
+    }
+    img, video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    video {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+  <h1>Happy Valentine's Day!</h1>
+  <p class="message">
+    You are the sweetest part of my life! Wishing you a day filled with love and happiness.
+  </p>
+  <div class="media-container">
+    <div class="media-item">
+      <img src="2.png" alt="Valentine's Day Image">
+    </div>
+    <div class="media-item">
+      <video controls poster="valentine-poster.jpg">
+        <source src="valentine.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</body>
+</html>
